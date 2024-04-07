@@ -1,0 +1,36 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div></div>
+                <div class="card">
+                <div class="card-body">
+                        <h4 class="card-title">My Saved Recipes</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Recipe</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let recipe of savedRecipes">
+                                        <td>{{ recipe.name }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button class="btn btn-danger" (click)="deleteRecipe(recipe.id)">
+                                                    <img src="img/delete.png" alt="delete Icon" width="20" height="20">
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 

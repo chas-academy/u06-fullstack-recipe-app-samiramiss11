@@ -1,0 +1,19 @@
+
+<section class="list">
+  <div class="recipebox">
+<div class="recipimgtext">>
+ <div *ngIf="selectedRecipe">
+  <h2>{{ selectedRecipe.recipe.label}}</h2>
+  <div class="button">
+    <button (click)="saveRecipe(selectedRecipe)">Save</button>
+   </div> 
+  <img class="image" [src]="selectedRecipe.recipe.image" alt="Recipe Image">
+  
+  <div class="details"><p>IngredientLines: {{ selectedRecipe.recipe.ingredientLines }}</p>
+    <p>instructions: {{ selectedRecipe.recipe.instructions }}</p> </div>
+  <!-- Add more details as needed -->
+</div>
+
+</div>
+</div>
+</section>

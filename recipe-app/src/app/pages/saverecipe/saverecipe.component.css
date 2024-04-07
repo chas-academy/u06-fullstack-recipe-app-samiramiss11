@@ -1,0 +1,62 @@
+@import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+.card-body{
+    background: linear-gradient(to bottom, #4ca59b, #2a9d8f, #6087c1);
+border-radius: 10px;
+    border-color: brown;
+}
+.table-responsive{
+    background-color:transparent;
+    
+}
+.table{
+    background-color:rgb(241, 241, 247);
+    border-radius: 5px;
+    box-sizing: 0px;
+    border-color: rgb(153, 154, 154);
+    
+}
+.table-responsive {
+
+    border-color: aqua;
+    border-radius: 2px;
+}
+
+.card-body{
+    background: linear-gradient(to bottom, #4ca59b, #2a9d8f, #6087c1);
+border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #333333;
+    min-height: 300px;
+    h4{
+        color: #ffffff;
+    }
+    tr {
+        color: #767676; 
+        font-size-adjust: 6px;
+    }
+}
+.table-responsive{
+    background-color:transparent;
+   
+}
+
+.table{
+    background: #ebeaea;
+    border-radius: 5px;
+    
+    border-color: rgb(153, 154, 154);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.table-responsive {
+
+    border-color: aqua;
+    border-radius: 2px;
+}

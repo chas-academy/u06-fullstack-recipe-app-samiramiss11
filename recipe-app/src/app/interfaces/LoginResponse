@@ -1,0 +1,4 @@
+interface LoginResponse {
+  user: any; // Replace `any` with a more specific type if possible
+  token: string;
+}

@@ -1,0 +1,106 @@
+.parent {
+margin-top: 50px;
+background-color: #fafafa;
+border: 1px solid  #2a9d8f;
+
+
+}
+
+
+
+.user-profile, .sectionC {
+  
+  padding: 30px;
+  background: linear-gradient(to bottom, #4ca59b, #2a9d8f, #6087c1);border-radius: 10px;
+  border: 1px solid #afb6b9;
+  margin: 20px auto;
+  max-width: 60%;
+  
+  border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+  h2, h4{
+    color: #f9f9f9;
+  }
+}
+
+
+
+.sectionA , section B {
+  align-items: center;
+  margin: 20px auto;
+ margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 25px;
+  padding-bottom: 45px;
+  padding-top: 30px;
+  border-radius: 10px;
+  background-color: #edeff0;
+  border: 1px solid #5c5e5f;
+  background-color: #e0e2e3;
+  border-radius: 10px;
+  max-width: 500px;
+  
+}
+
+
+
+.section h2 {
+  margin-bottom: 20px;
+  padding-top: 35px;
+  color: #1c1e21;
+  
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  
+
+}
+
+form label {
+  font-weight:500;
+  
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #253e65;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recipe-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe-list li {
+  margin-bottom: 10px;
+}
+
+.recipe-list button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab3{
+  margin-top: 20px;
+}

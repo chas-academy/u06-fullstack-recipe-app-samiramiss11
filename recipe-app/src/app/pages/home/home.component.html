@@ -1,0 +1,46 @@
+<!-- <body class="parent"> -->
+<body><div class="webpage" >
+   <div class="background"></div>
+    
+   <div class="welcome-section">
+     <div class="welcome-text" ><h1 >Lets Go Foodie</h1>
+      <p>Find and save your favorite recipes all in one place.</p>
+    </div> 
+      <div class="search-container">
+        <input type="text" class="search-input" name="searchInput" id="search" placeholder="What do you want to eat?" [(ngModel)]="searchQuery">
+        <button class="search-button" (click)="search()">Search</button>
+        <div class="bottom-triangle"></div></div>
+  </div>
+</div>
+
+
+<!-- Display error message if there is an error -->
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<!-- Search Results -->
+
+   
+
+<section class="list">
+  <!-- <div><app-recipefilter></app-recipefilter> </div> -->
+<div *ngFor="let recipe of searchResults" class="recipe-container" (click)="navigateToRecipesearch(recipe)">
+  
+  <div class="recipebox">
+  <div class="recipimgtext">
+  <img class="image"  [src]="recipe.recipe.image" alt="{{ recipe.recipe.label }}">
+  <h5>{{ recipe.recipe.label  }}</h5>
+  <p>{{ recipe.description }}</p>
+  <p>{{recipe.totalTime}}</p>
+  <div class="button">
+    <button (click)="navigateToRecipesearch(recipe)">View Full Recipe</button>
+    <button (click)="saveRecipe(recipe)">Save</button>
+</div>
+</div>
+  
+  <!-- Add more details as needed -->
+</div>
+
+</div>
+</section>
+
+</body>
+ 

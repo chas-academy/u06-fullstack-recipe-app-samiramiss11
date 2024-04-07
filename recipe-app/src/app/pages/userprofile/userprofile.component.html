@@ -1,0 +1,121 @@
+
+<mat-tab-group class="parent" animationDuration="600ms">
+    <mat-tab label="User Information">
+      <div class="user-profile">
+        <h4 class="">User Information</h4>
+          <section class="sectionA">
+             
+              <form action="#" method="POST" class="form border p-2 ">
+<!--                 
+                <p>Name:  {{ currentUser.name }}</p>
+                <p>Email: {{ currentUser.email }}</p>  -->
+
+                <p>Name: </p>
+                <p>Email: </p>
+                <div class="col-md-10">
+                <button value="Log out" type="submit">Log out</button>
+              </div>
+              </form>
+
+               <!--logout button -->
+            
+          </section>
+          <h4>Change password</h4>
+          <section class="sectionA">
+            <div class="col-md-12">
+              <form action="#" method="post" accept-charset="UTF-8" id="edit_personal_details" data-gtm-form-interact-id="1">
+                <div class="form-group">
+                    <label
+                      for="user_password_confirmation"
+                      class="col-md-4 control-label"
+                      >Password</label>
+                    <div class="col-md-25">
+                      <input
+                        id="user_password"
+                        name="user[password]"
+                        type="password"
+                        class="form-control" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group">
+                    <label
+                      for="user_password_confirmation"
+                      class="col-md-4 control-label"
+                      >Password confirmation</label>
+                    <div class="col-md-25">
+                      <input id="user_password_confirmation"
+                        name="user[password_confirmation]"
+                        type="password"
+                        class="form-control"
+                        fdprocessedid="3tiq2i" />
+                    </div>
+                  </div>
+                
+      
+                
+                  
+                    <div class="col-md-10">
+                      <button  value="Update Personal Details" type="submit">Update Password</button>
+                    </div>
+                  
+                
+              </form>
+            </div>
+          </section>
+        </div>
+    </mat-tab>
+    <mat-tab label="Create New Recipe">
+        <div class="recipe">
+            <div class="sectionC">
+              <h2>Create New Recipe</h2>
+              <form>
+                <label for="recipeName">Recipe Name:</label>
+                <input
+                  type="text"
+                  id="recipeName"
+                  name="recipeName"
+                  placeholder="Enter recipe name"
+                  required
+                />
+                <label for="category">Category:</label>
+                <input
+                  type="text"
+                  id="category"
+                  name="category"
+                  placeholder="Enter category"
+                  required
+                />
+                <label for="cookingTime">Cooking Time:</label>
+                <input
+                  type="text"
+                  id="cookingTime"
+                  name="cookingTime"
+                  placeholder="Enter cooking time"
+                  required
+                />
+                <label for="ingredients">Ingredients:</label>
+                <textarea
+                  id="ingredients"
+                  name="ingredients"
+                  placeholder="Enter ingredients"
+                  required
+                ></textarea>
+                <label for="description">Description:</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  placeholder="Enter description"
+                  required
+                ></textarea>
+                <button type="submit">Create Recipe</button>
+              </form>
+            </div>
+          </div>
+      </mat-tab>
+    <mat-tab label="Saved Recipes">
+    <div class="tab3"><app-saverecipe></app-saverecipe> </div>
+    </mat-tab>
+  </mat-tab-group>
+  
+

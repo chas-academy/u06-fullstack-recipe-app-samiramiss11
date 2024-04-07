@@ -1,0 +1,15 @@
+
+
+
+<div class="dropdown" [class.on]="isOpen" data-control="checkbox-dropdown">
+  <label class="dropdown-label" >Filter Recipes</label>
+  
+  <div class="dropdown-list">
+    <a href="#" data-toggle="check-all" class="dropdown-option">Check All</a>
+    
+    <label class="dropdown-option" *ngFor="let option of options">
+      <input type="checkbox" name="dropdown-group" [value]="option.value" [(ngModel)]="option.checked" (change)="onCheckBox()" />
+      {{ option.label }}
+    </label>
+  </div>
+</div>

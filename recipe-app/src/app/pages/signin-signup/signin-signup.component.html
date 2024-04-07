@@ -1,0 +1,38 @@
+<html><body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form (ngSubmit)="onSubmitRegister()">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="name" placeholder="User name" [(ngModel)]="registerdetails.name" >
+          <input type="email" name="email" placeholder="Email" [(ngModel)]="registerdetails.email"l>
+          <input type="password" name="password" placeholder="Password" [(ngModel)]="registerdetails.password">
+          <button type="submit" >Sign up</button>
+        </form>
+			</div>
+
+			<div class="login">
+				<form (ngSubmit)="onSubmitLogin()">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" [(ngModel)]="logindetails.email">
+					<input type="password" name="password"  placeholder="Password" [(ngModel)]="logindetails.password">
+					<button type="submit" >Sign In</button>
+          <button type="submit" *ngIf="isLoggedIn()" (click)="onSubmit()">Sign Out</button>
+				</form>
+			</div>
+	</div>
+
+
+</body>
+</html>
+  <!-- <footer>
+    <nav class="socialIcon">
+        <ul>
+          <li class="linkedin"><a href="https://www.linkedin.com/in/samira-moa-79a977131/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Icon" width="35" height="35"></a></li>
+          <li class="mailto"><a href="mailto:samiramiss_nov@hotmail.com" target="_blank"><img src="img/mail.png" alt="mail icon" width="35" height="35"></a></li>
+          <li class="github"><a href="https://github.com/" target="_blank"><img src="img/github.png" alt="github icon" width="35" height="35"></a></li>
+        </ul>
+      </nav>
+    <p class="footer">© 2024 SamiraMoa. All rights reserved</p>
+    </footer> -->

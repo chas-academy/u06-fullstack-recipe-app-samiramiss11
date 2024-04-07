@@ -1,0 +1,36 @@
+<div ><p>Enjoy Recipes of the Day!</p></div>
+
+<app-recipefilter></app-recipefilter>
+
+<!-- <div class="felxbox">
+<div class="recipebox">
+  <div class="recipimgtext">
+  <img class="image"  src="C:\Users\samir\ChasAcademy\u06-fullstack-recipe-app-samiramiss11\recipe-app\src\assets\background1.jpg" alt="recipe.name">
+  <h3>recipe title</h3>
+  <span>Appetizer</span>
+  <p>Time Needs: 30 Mins</p>
+  <p>recipe description</p>
+</div>
+</div>
+ -->
+ <section class="list">
+<div *ngFor="let recipe of popularRecipes" class="recipe-container" (click)="navigateToRecipedetail(recipe)">
+  <div class="recipebox">
+    <div class="recipimgtext">
+    <img class="image"  [src]="recipe.image" alt="{{ recipe.name }}">
+    <h3>{{ recipe.title }}</h3>
+    <p>{{ recipe.description }}</p>
+  </div>
+    <div class="button">
+      <button (click)="navigateToRecipedetail(recipe)">View Full Recipe</button>
+    <button (click)="saveRecipe(recipe)">Save</button>
+  </div>
+    <!-- Add more details as needed -->
+  </div>
+  
+</div>
+</section>
+
+
+
+
