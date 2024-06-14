@@ -8,7 +8,7 @@ border: 1px solid  #2a9d8f;
 
 
 
-.user-profile, .sectionC {
+.user-profile{
   
   padding: 30px;
   background: linear-gradient(to bottom, #4ca59b, #2a9d8f, #6087c1);border-radius: 10px;
@@ -20,6 +20,24 @@ border: 1px solid  #2a9d8f;
     box-shadow: 5px 20px 50px #000;
   h2, h4{
     color: #f9f9f9;
+    padding-left: 20px;
+  }
+}
+
+.sectionC {
+  
+  padding: 30px;
+  background: linear-gradient(to bottom, #4ca59b, #2a9d8f, #6087c1);border-radius: 10px;
+  border: 1px solid #afb6b9;
+  margin: 20px auto;
+  max-width: 60%;
+  
+  border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+  h2, h4{
+    color: #f9f9f9;
+    padding-left: 20px;
+    margin: 10px 15px 10px 15px;
   }
 }
 
@@ -54,7 +72,9 @@ border: 1px solid  #2a9d8f;
 form {
   display: grid;
   grid-gap: 10px;
-  width: 100%;
+
+  padding-left: 10px;
+  padding-top: 10px;
   
 
 }
@@ -72,15 +92,17 @@ form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 form button {
-  padding: 10px 20px;
+  padding: 10px 15px 10px 15px;
   background-color: #253e65;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px 15px 0px  0px
 }
 
 .recipe-list {
@@ -103,4 +125,29 @@ form button {
 
 .tab3{
   margin-top: 20px;
+}
+
+/* Media Query for iPhone 12 Pro size or smaller */
+@media (max-width: 390px) {
+
+  .user-profile, .sectionC {
+    margin: 20px auto;
+    max-width: 100%;
+    
+  }
+  form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.sectionC, .user-profile, .tab3 {
+  
+
+    box-shadow: none;
+
+  }
 }

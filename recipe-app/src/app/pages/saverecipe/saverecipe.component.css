@@ -31,7 +31,7 @@ border-radius: 10px;
     border: none;
     outline: none;
     border-radius: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 5px 20px 50px #333333;
     min-height: 300px;
     h4{
@@ -59,4 +59,13 @@ border-radius: 10px;
 
     border-color: aqua;
     border-radius: 2px;
+}
+
+
+@media (max-width: 390px) {
+.card-body{
+    box-shadow: none;
+    margin: 0px;
+
+}
 }

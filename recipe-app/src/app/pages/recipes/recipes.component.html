@@ -1,36 +1,65 @@
-<div ><p>Enjoy Recipes of the Day!</p></div>
+ <!-- /*
+<div class="welcome"><h1 class="welcome">Recipes of the Day!</h1></div>
 
 <app-recipefilter></app-recipefilter>
 
-<!-- <div class="felxbox">
-<div class="recipebox">
-  <div class="recipimgtext">
-  <img class="image"  src="C:\Users\samir\ChasAcademy\u06-fullstack-recipe-app-samiramiss11\recipe-app\src\assets\background1.jpg" alt="recipe.name">
-  <h3>recipe title</h3>
-  <span>Appetizer</span>
-  <p>Time Needs: 30 Mins</p>
-  <p>recipe description</p>
-</div>
-</div>
- -->
+
+
  <section class="list">
 <div *ngFor="let recipe of popularRecipes" class="recipe-container" (click)="navigateToRecipedetail(recipe)">
   <div class="recipebox">
     <div class="recipimgtext">
     <img class="image"  [src]="recipe.image" alt="{{ recipe.name }}">
-    <h3>{{ recipe.title }}</h3>
+    <h6>{{ recipe.title }}</h6>
     <p>{{ recipe.description }}</p>
   </div>
     <div class="button">
       <button (click)="navigateToRecipedetail(recipe)">View Full Recipe</button>
     <button (click)="saveRecipe(recipe)">Save</button>
   </div>
-    <!-- Add more details as needed -->
+   
   </div>
   
 </div>
-</section>
+</section>*/
 
 
 
+ --> 
 
+ <div class="welcome"><h1 class="welcome">Recipes of the Day!</h1></div>
+
+ <!-- Filter Recipes Section -->
+  <div class="filter">
+ <div class="dropdown" [class.on]="isOpen" data-control="checkbox-dropdown">
+    <!-- <label class="dropdown-label" (click)="toggleOpen()">Filter Recipes</label> -->
+   
+   <div class="dropdown-list">
+ 
+     <div class="dropdown-section">
+       <!-- <a href="#" data-toggle="check-all" class="dropdown-option" (click)="onCheckAll($event)">Check All</a> -->
+      <label class="dropdown-option" *ngFor="let option of filterOptions">
+         <input type="checkbox" name="filter-group" [value]="option.value" [(ngModel)]="option.checked" (change)="onCheckBox()" />
+         {{ option.label }}
+       </label>
+     </div>
+   </div>
+ </div>
+</div>
+ 
+ <!-- Recipes List Section -->
+ <section class="list">
+   <div *ngFor="let recipe of filteredRecipes" class="recipe-container" (click)="navigateToRecipedetail(recipe)">
+     <div class="recipebox">
+       <div class="recipimgtext">
+         <img class="image" [src]="recipe.image" alt="{{ recipe.name }}">
+         <h6>{{ recipe.title }}</h6>
+         <p>{{ recipe.description }}</p>
+       </div>
+       <div class="button">
+         <button (click)="navigateToRecipedetail(recipe)">View Full Recipe</button>
+         <button (click)="saveRecipe(recipe)">Save</button>
+       </div>
+     </div>
+   </div>
+ </section>

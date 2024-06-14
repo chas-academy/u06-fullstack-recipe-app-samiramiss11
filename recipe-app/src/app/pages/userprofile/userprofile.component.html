@@ -3,23 +3,19 @@
     <mat-tab label="User Information">
       <div class="user-profile">
         <h4 class="">User Information</h4>
-          <section class="sectionA">
+
              
-              <form action="#" method="POST" class="form border p-2 ">
-<!--                 
-                <p>Name:  {{ currentUser.name }}</p>
-                <p>Email: {{ currentUser.email }}</p>  -->
-
-                <p>Name: </p>
-                <p>Email: </p>
+            <section class="sectionA">
+              <form (submit)="logout()" class="form border p-2">
+                <p>Name: {{ currentUser.name }}</p>
+                <p>Email: {{ currentUser.email }}</p>
                 <div class="col-md-10">
-                <button value="Log out" type="submit">Log out</button>
-              </div>
-              </form>
+                  <button type="submit">Log out</button>
 
-               <!--logout button -->
-            
-          </section>
+
+                </div>
+              </form>
+            </section>
           <h4>Change password</h4>
           <section class="sectionA">
             <div class="col-md-12">
@@ -50,7 +46,7 @@
                         class="form-control"
                         fdprocessedid="3tiq2i" />
                     </div>
-                  </div>
+                  
                 
       
                 
@@ -58,7 +54,7 @@
                     <div class="col-md-10">
                       <button  value="Update Personal Details" type="submit">Update Password</button>
                     </div>
-                  
+                  </div>
                 
               </form>
             </div>
@@ -70,7 +66,7 @@
             <div class="sectionC">
               <h2>Create New Recipe</h2>
               <form>
-                <label for="recipeName">Recipe Name:</label>
+                
                 <input
                   type="text"
                   id="recipeName"
@@ -78,7 +74,7 @@
                   placeholder="Enter recipe name"
                   required
                 />
-                <label for="category">Category:</label>
+                <!-- <label for="category">Category:</label> -->
                 <input
                   type="text"
                   id="category"
@@ -86,7 +82,6 @@
                   placeholder="Enter category"
                   required
                 />
-                <label for="cookingTime">Cooking Time:</label>
                 <input
                   type="text"
                   id="cookingTime"
@@ -94,14 +89,12 @@
                   placeholder="Enter cooking time"
                   required
                 />
-                <label for="ingredients">Ingredients:</label>
                 <textarea
                   id="ingredients"
                   name="ingredients"
                   placeholder="Enter ingredients"
                   required
                 ></textarea>
-                <label for="description">Description:</label>
                 <textarea
                   id="description"
                   name="description"
@@ -114,7 +107,7 @@
           </div>
       </mat-tab>
     <mat-tab label="Saved Recipes">
-    <div class="tab3"><app-saverecipe></app-saverecipe> </div>
+    <!-- <div class="tab3"><app-saverecipe></app-saverecipe> </div> -->
     </mat-tab>
   </mat-tab-group>
   

@@ -1,6 +1,6 @@
 
 
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -57,4 +57,71 @@ export class SigninSignupComponent {
     console.log("Logging out...");
     this.logout();
   }
-}
+}*/
+
+// src/app/pages/signin-signup/signin-signup.component.ts
+import { Component } from '@angular/core';
+import { AuthService } from '../../shared/services/auth.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
+
+@Component({
+    selector: 'app-signin-signup',
+    standalone: true,
+    imports: [CommonModule, FormsModule, RouterModule],
+    templateUrl: './signin-signup.component.html',
+    styleUrls: ['./signin-signup.component.css'],
+})
+export class SigninSignupComponent {
+    registerdetails = { name: '', email: '', password: '' };
+    logindetails = { email: '', password: '' };
+ // router: any;
+
+    constructor(private authService: AuthService, private router: Router) { }
+
+    onSubmitRegister() {
+        this.authService.register(this.registerdetails).subscribe(response => {
+            console.log('Registered successfully', response);
+        }, error => {
+            console.error('Registration error', error);
+        });
+    }
+
+   /* onSubmitLogin() {
+      console.log("test")
+       this.authService.login(this.logindetails).subscribe(response => {
+            console.log('Logged in successfully', response);
+            this.router.navigate(['/userprofile']);  // Navigate to user profile on successful login
+        }, error => {
+            console.error('Login error', error);
+        });
+      
+    } */
+        onSubmitLogin() {
+          this.authService.login(this.logindetails).subscribe(user => {
+            console.log('Logged in successfully', user);
+            this.router.navigate(['/userprofile'], { state: { user: user } });
+          }, (error: any) => {
+            console.error('Login error', error);
+          });
+        }
+
+    /*onSubmitLogout() {
+        this.authService.logout().subscribe(response => {
+            console.log('Logged out successfully', response);
+            this.router.navigate(['/login']);
+        }, error => {
+            console.error('Logout error', error);
+        });
+    }
+
+
+    onSubmit() {
+      this.onSubmitLogout();
+    }
+  */
+    isLoggedIn() {
+      return this.authService.isLoggedIn();
+    }
+  }

@@ -1,4 +1,4 @@
-<!-- <body class="parent"> -->
+
 <body><div class="webpage" >
    <div class="background"></div>
     
@@ -12,16 +12,10 @@
         <div class="bottom-triangle"></div></div>
   </div>
 </div>
-
-
 <!-- Display error message if there is an error -->
 <div *ngIf="errorMessage">{{ errorMessage }}</div>
 <!-- Search Results -->
-
-   
-
 <section class="list">
-  <!-- <div><app-recipefilter></app-recipefilter> </div> -->
 <div *ngFor="let recipe of searchResults" class="recipe-container" (click)="navigateToRecipesearch(recipe)">
   
   <div class="recipebox">
@@ -35,12 +29,8 @@
     <button (click)="saveRecipe(recipe)">Save</button>
 </div>
 </div>
-  
-  <!-- Add more details as needed -->
 </div>
-
 </div>
 </section>
-
 </body>
  

@@ -19,8 +19,9 @@
     font-size: 12px;
     color: #333;
     width: 200px;
-    left: 570px;
+    /* left: 570px; */
    right:3px;
+   margin-left: 20px;
    
   
     .dropdown-list {

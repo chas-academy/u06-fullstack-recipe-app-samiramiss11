@@ -42,6 +42,8 @@ Route::post('register', [AuthController::class, 'register']);
 Route::middleware(['auth:sanctum'])->group(function () {
     // Logout user
     Route::post('logout', [AuthController::class, 'logout']);
+    // for userprofilr 
+    Route::get('userprofile', [AuthController::class, 'getUserProfile']); // Ensure this route is defined
     // Get specific user details
     Route::get('getuser/{id}', [AuthController::class, 'getUser']);
 

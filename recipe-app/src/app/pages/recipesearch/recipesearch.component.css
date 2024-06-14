@@ -1,17 +1,22 @@
+.list{
+  display: flex;
+      align-items: center;
+      justify-content: center;
 
+}
 .recipe-container{
     display: inline-block;
     border-radius: 10px;
-  
+    display: relative;
   }
   .recipebox {
-    
+
     margin: 30px  20px 2px 20px; /* Adjust margin for spacing between recipe boxes */
     text-align: center;
     border: 1px solid #026972;
     border-radius: 10px;
     height: 60%;
-    width: auto;
+    width: 42rem;
     
   
   }
@@ -24,6 +29,7 @@
       box-shadow: 10px 10px 18px 0px rgba(47, 50, 50, 0.457);
       background-color: #e3e4e6;
       border-radius: 10px;
+      
       h5{
         display: relative;
       }
@@ -34,9 +40,9 @@
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 30px;
-    width: 30; /* Make the image width 100% to fill its container */
-    max-width: 200px; /* Limit the maximum width of the image */
-    height: 20rem; /* Automatically adjust the height */
+    width: 30;
+    width: 22rem; 
+    height: 20rem; 
     border-radius: 10px;
   }
   
@@ -65,5 +71,11 @@ margin:20px 30px 40px 30px
     .cta-button {
       font-size: 6px;
     }
+
+    .image {
+      width: 12rem; 
+      height: 8rem; 
+    }
+    
   }
   

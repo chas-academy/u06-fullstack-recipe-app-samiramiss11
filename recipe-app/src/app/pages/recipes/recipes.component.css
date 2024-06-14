@@ -1,13 +1,31 @@
 
+.filter {
+
+  padding: 10px;
+  background-color: #e3e4e6;
+  
+
+}
+
+
+
 .felxbox {
   display: flex;
   flex-wrap: wrap; /* Enable wrapping to ensure elements wrap to the next line */
   justify-content: space-around; /* Adjust spacing between elements */
 }
+
+.list {
+  margin-left: 15px; /* Automatically calculate left margin */
+  margin-right: 15px; /* Automatically calculate right margin */
+}
+
 .recipe-container{
   display: inline-block;
   border-radius: 10px;
   width: 21rem;
+  max-height: 23rem;
+  font-size: small;
 
 }
 .recipebox {
@@ -15,8 +33,9 @@
   margin: 10px; /* Adjust margin for spacing between recipe boxes */
   text-align: center;
   border: 1px solid #026972;
-  border-radius: 10px;
-
+  border-radius: 20px;
+  box-shadow: 10px 10px 18px 0px rgba(47, 50, 50, 0.457);
+  background-color: #e3e4e6;
 }
 
 .recipebox .recipimgtext {
@@ -24,9 +43,9 @@
   display: grid;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px 18px 0px rgba(47, 50, 50, 0.457);
+    
     background-color: #e3e4e6;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     h5{
       display: relative;
       font-size: 12px;
@@ -50,4 +69,45 @@ button {
   height: 40px;
   /* width: 100px; */
   margin-left: 5px;
+}
+
+.welcome {
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  font-size: 35px; 
+  font-weight: bold;
+  padding: 25px 65px 25px 35px; 
+  color: #254a65;
+  background-color: #2a9d8f; 
+
+}
+
+.welcome h1 {
+  margin: 0; /* Remove default margin from h1 */
+}
+
+/* Media Query for iPhone 12 Pro size or smaller */
+@media (max-width: 390px) {
+  .recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .welcome {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    font-size: 22px; 
+    font-weight: bold;
+    padding: 15px 45px 15px 45px; 
+    color: #254a65;
+    background-color: #2a9d8f; 
+  }
+  
+  .welcome h1 {
+    margin: 0; /* Remove default margin from h1 */
+  }
 }
