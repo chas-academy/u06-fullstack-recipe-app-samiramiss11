@@ -1,42 +1,13 @@
-# # Dockerfile
-# # Use base image for container
-# FROM richarvey/nginx-php-fpm:3.1.6
-# # Copy all application code into your Docker container
-# COPY . .
-# RUN apk update
-# # Install the `npm` package
-# RUN apk add --no-cache npm
-# # Install NPM dependencies
-# RUN npm install
-# # Build Vite assets
-# RUN npm run build
-# CMD ["/start.sh"]
-
-
-# imodified this below
-# Use the base image for container
+# Dockerfile
+# Use base image for container
 FROM richarvey/nginx-php-fpm:3.1.6
-
-# Set working directory
-WORKDIR /var/www/html
-
 # Copy all application code into your Docker container
 COPY . .
-
-# Copy Nginx configuration file
-COPY conf/nginx-site.conf /etc/nginx/sites-available/default
-
-# Copy Supervisor configuration file
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# Install npm and other dependencies
-RUN apk update && apk add --no-cache npm
-
-# Install NPM dependencies and build assets
-RUN npm install && npm run build
-
-# Expose port 80
-EXPOSE 80
-
-# Start the container by running the start script
+RUN apk update
+# Install the `npm` package
+RUN apk add --no-cache npm
+# Install NPM dependencies
+RUN npm install
+# Build Vite assets
+RUN npm run build
 CMD ["/start.sh"]
