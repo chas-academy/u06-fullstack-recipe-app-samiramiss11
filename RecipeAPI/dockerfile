@@ -26,6 +26,9 @@ COPY . .
 # Copy Nginx configuration file
 COPY conf/nginx-site.conf /etc/nginx/sites-available/default
 
+# Copy Supervisor configuration file
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 # Install npm and other dependencies
 RUN apk update && apk add --no-cache npm
 
