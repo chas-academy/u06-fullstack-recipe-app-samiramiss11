@@ -23,6 +23,9 @@ WORKDIR /var/www/html
 # Copy all application code into your Docker container
 COPY . .
 
+# Copy Nginx configuration file
+COPY conf/nginx-site.conf /etc/nginx/sites-available/default
+
 # Install npm and other dependencies
 RUN apk update && apk add --no-cache npm
 
