@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = 'http://localhost:8000/api';
+    private apiUrl = 'https://u06-fullstack-recipe-app-samiramiss11.onrender.com';
     private httpOptions={
       headers: new HttpHeaders({
         'Content-Type' : 'application/json'
